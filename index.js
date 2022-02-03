@@ -26,13 +26,15 @@ const nestedMuppet = {
 };
 
 // Strings
-
+let splitFarmAnimals = farmAnimals.split(" ");
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
+let [moo,neigh,baa,oink,cluck] = splitFarmAnimals;
 
 // 2. Bolt the horse wandered off, so just give us four animals, and let's name them bessie, dolly, babe, and little.
-
+let [bessie,dolly,babe,little] = [...splitFarmAnimals.slice(0,1),...splitFarmAnimals.slice(2)];
 // 3. Little the chicken had to go back to the coop, so now we're left with three. Let's use color variables of blackAndWhite, black, and pink.
-
+let [blackAndWhite,black,pink] = [...splitFarmAnimals.slice(0,1),...splitFarmAnimals.slice(2)];
+console.log([blackAndWhite,black,pink]);
 // Arrays
 
 // 4. Use destructuring to assign appropriate variables using the color names.
@@ -46,3 +48,5 @@ const nestedMuppet = {
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+let {nestedJob,nestedPartner} = nestedMuppet;
+let {song2,song4} = nestedMuppet.album.theMuppetMovie;
